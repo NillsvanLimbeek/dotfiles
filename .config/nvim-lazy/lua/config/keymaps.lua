@@ -32,3 +32,12 @@ keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" 
 keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
 keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
 keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
+
+-- cycle through tabs
+keymap.set("n", "<Tab>", "<cmd>BufferLineCycleNext<cr>", { desc = "Next Buffer" })
+keymap.set("n", "<S-Tab>", "<cmd>BufferLineCyclePrev<cr>", { desc = "Prev Buffer" })
+keymap.set("n", "<leader>bc", "<Cmd>BufferLineGroupClose ungrouped<CR>", { desc = "Delete all buffer" })
+
+-- indent code blocks
+keymap.set("v", "<", "<gv", { noremap = true, silent = true })
+keymap.set("v", ">", ">gv", { noremap = true, silent = true })
